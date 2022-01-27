@@ -1,0 +1,64 @@
+.card {
+    background-color: var(--color-contrast-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 45rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.card__title {
+    font-size: var(--font-size-card-title);
+    margin-bottom: 1rem;
+}
+
+.card__texto {
+    line-height: 1.2rem;
+}
+
+.card-post {
+    background-color: var(--color-contrast-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem 2rem 2rem;
+    box-sizing: border-box;
+    margin-bottom: 2.25rem;
+    border-top: 1rem solid;
+}
+
+.card-post__title {
+    font-size: var(--font-size-card-post-header);
+    font-weight: var(--font-weight-card);
+    margin-bottom: 1rem;
+}
+
+.card-post__goal {
+    line-height: 1.3rem;
+}
+
+.card-post--wellfare {
+    border-color: var(--color-category-welfare);
+}
+
+.card-post--behavior {
+    border-color: var(--color-category-behavior);
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 900px) {
+    .posts {
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

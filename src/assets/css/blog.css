@@ -1,0 +1,24 @@
+.list-category {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.list-category__category {
+    font-weight: var(--font-weight-category);
+    background-color: var(--color-contrast-light);
+    border-radius: 3rem;
+    padding: 1rem;
+}
+
+.list-category__category--welfare {
+    color: var(--color-contrast-light);
+    background-color: var(--color-category-welfare);
+}
+
+.list-category__category--behavior {
+    color: var(--color-contrast-light);
+    background-color: var(--color-category-behavior);
+}
+

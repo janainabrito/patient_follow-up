@@ -1,0 +1,15 @@
+.doguito-image {
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.notfound-texto {
+  font-size: var(--font-size-notfound-text);
+  margin-bottom: 1rem;
+}
+
+.notfound-link {
+  color: var(--color-primary);
+}
