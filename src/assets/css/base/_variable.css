@@ -1,5 +1,5 @@
 :root {
-    --font-family-body: 'Montserrat', sans-serif;
+    --font-family-body: 'Roboto', sans-serif;
     --font-family-logo: 'Pacifico', cursive;
     --font-family-title-page: 'Pacifico', cursive;
 
@@ -8,7 +8,6 @@
     --font-weight-category: 500;
     --font-weight-menu-header-item: 500;
 
-    --font-size-logo: 1.75rem;
     --font-size-card-title: 1.75rem;
     --font-size-card-post-title: 1.375rem;
     --font-size-input-label: 1.25rem;
@@ -19,7 +18,7 @@
     --font-size-menu-header-item: 1.2rem;
     --font-size-notfound-text: 1.25rem;
 
-    --color-pruimary: #0071ea;
+    --color-primary: #33a2fc;
     --color-secondary: #d6eaff;
     --color-contrast-dark: #4D4D4D;
     --color-contrast-light: #fff;
@@ -28,14 +27,15 @@
     --color-sucess: #46bb42;
 
     --color-category-welfare: #ff4949;
-    --color-category-behavior: #368dff;
+    --color-category-behavior: #33a2fc;
+    --color-link-hover: #97c8fb;
+    --color-button-hover: #303f9f;
 
     --shadow: 0 5px 10px #55a6ff38;
 }
 
 @media(min-width: 800px) {
     :root {
-        --font-size-logo: 2.5rem;
-        --font-size-menu-header-item: 1rem;
+        --font-size-menu-header-item: 0.9rem;
     }
 }

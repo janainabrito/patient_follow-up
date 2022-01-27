@@ -1,27 +1,27 @@
 import './assets/css/base/base.css'
-import { Container } from '@material-ui/core'
 import 'fontsource-roboto'
-import { UserRegistration } from './pages/userRegistration';
-import Navbars from './pages/nav/nav';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sobre from './pages/About';
+import About from './pages/About';
 import Home from './pages/Home';
+import List from './pages/List';
+import Header from './components/Header';
 import Pagina404 from './pages/Page404';
+import { UserRegistration } from './pages/userRegistration';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      {/* <Navbars></Navbars>
-      <Container component="article" maxWidth="lg">
-        <UserRegistration />
-      </Container> */}
-     
-     <Routes>
+      <Header></Header>
+      <Routes>
         <Route path="/" caseSensitive={false} element={<Home />} />
-        <Route path="/sobre" caseSensitive={false} element={<Sobre />} />
+        <Route path="/users/new" caseSensitive={false} element={<UserRegistration />} />
+        <Route path="/users" caseSensitive={false} element={<List />} />
+        <Route path="/about" caseSensitive={false} element={<About />} />
         <Route path="*" element={<Pagina404 />} />
-    </Routes>
-</Router>
+      </Routes>
+      <Footer></Footer>
+    </Router>
   );
 }
 

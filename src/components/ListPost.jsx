@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { busca } from '../api/api'
+import { search } from '../api/api'
 
 
 
-const ListaPost = ( { url } ) => { 
+const ListaPost = ({ url }) => {
 
-const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])
 
-useEffect(() => {
-  busca(url, setPosts)
-}, [])
+  useEffect(() => {
+    search(url, setPosts)
+  }, [])
 
-  return(
+  return (
     <section className="posts container">
-      { 
-       posts.map((post)=> (
-         <Link key={post.id} className={`card-post card-post--${post.categoria}`} to={`/posts/${post.id}`}>
-           <article>
+      {
+        posts.map((post) => (
+          <Link key={post.id} className={`card-post card-post--${post.categoria}`} to={`/posts/${post.id}`}>
+            <article>
               <h3 className="card-post__title">
                 {post.title}
               </h3>
               <p className="card-post__goal">{post.metadescription}</p>
-           </article> 
-         </Link>
-       ))
+            </article>
+          </Link>
+        ))
       }
     </section>
   )

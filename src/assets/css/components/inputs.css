@@ -10,11 +10,17 @@
 .input-container {
     font-weight: var(--font-weight-input);
     position: relative;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
+    background-color: var(--color-contrast-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .input {

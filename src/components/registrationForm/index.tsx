@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { TextField, Button, Switch, FormControlLabel } from '@material-ui/core';
+import { TextField, Button, Switch, FormControlLabel, Container } from '@material-ui/core';
 import { IUser } from '../../types/user';
 import { IError } from '../../types/error';
+import '../../assets/css/components/inputs.css'
+import '../../assets/css/components/button.css'
 
 interface Props {
     submit: (data: IUser) => void
@@ -25,7 +27,6 @@ export function RegistrationForm({ submit }: Props) {
 
     function getHelperText(type: string) {
         const errorsList = errors.filter(e => e.type === type);
-        console.log('errorsList', errorsList);
         let message = "";
         if (errorsList.length > 0) {
             message = errorsList[0].message;
@@ -39,7 +40,7 @@ export function RegistrationForm({ submit }: Props) {
             error
         ]);
     }
-    
+
     function validateAttribute(attribute: any, attrType: string) {
         let attrMessage = "";
         let attrValidation = { type: attrType, valid: true, message: attrMessage }
@@ -65,60 +66,74 @@ export function RegistrationForm({ submit }: Props) {
         return attrValidation;
     }
 
-    //
+    const stylesFn = () => ({
+        input: {
+            color: "blue"
+        },
+        focused: {
+            background: "red"
+        }
+    });
+
     return (
-        <form onSubmit={onSubmit}>
-            <TextField
-                type="text"
-                value={name}
-                onChange={(event) => setName(event.target.value)}
-                onBlur={(event) => validateAttribute(name, "name")}
-                helperText={getHelperText("name")}
-                error={validate("name")}
-                id="name"
-                label="Name"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-            />
-            <TextField
-                value={age}
-                onChange={(event) => setAge(event.target.value)}
-                onBlur={(event) => validateAttribute(age, "age")}
-                helperText={getHelperText("age")}
-                error={validate("age")}
-                id="age"
-                label="Age"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-            />
-            <TextField
-                value={phone}
-                onChange={(event) => setPhone(event.target.value)}
-                onBlur={(event) => validateAttribute(phone, "phone")}
-                helperText={getHelperText("phone")}
-                error={validate("phone")}
-                id="phone"
-                label="Phone"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-            />
+        <form onSubmit={onSubmit} className='form'>
+            <div className="container">
+                <div className="input-container">
+                    <TextField
+                        type="text"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                        onBlur={(event) => validateAttribute(name, "name")}
+                        helperText={getHelperText("name")}
+                        error={validate("name")}
+                        id="name"
+                        label="Name"
+                        variant="outlined"
+                        margin="normal"
+                    />
 
-            <FormControlLabel
-                label="Is active"
-                control={<Switch
-                    checked={active}
-                    onChange={(event) => setactive(event.target.checked)}
-                    name="active"
-                    color="primary"
-                />}
-            />
+                    <TextField
+                        value={age}
+                        onChange={(event) => setAge(event.target.value)}
+                        onBlur={(event) => validateAttribute(age, "age")}
+                        helperText={getHelperText("age")}
+                        error={validate("age")}
+                        id="age"
+                        label="Age"
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                    />
 
-            <Button type="submit" variant="contained" color="primary">
-                Register
-            </Button>
+                    <TextField
+                        value={phone}
+                        onChange={(event) => setPhone(event.target.value)}
+                        onBlur={(event) => validateAttribute(phone, "phone")}
+                        helperText={getHelperText("phone")}
+                        error={validate("phone")}
+                        id="phone"
+                        label="Phone"
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                    />
+
+                    {/* <FormControlLabel
+                        label="Is active"
+                        control={<Switch
+                            checked={active}
+                            onChange={(event) => setactive(event.target.checked)}
+                            name="active"
+                            color="primary"
+                        />}
+                    /> */}
+
+                    <Button className="button" type="submit" variant="contained" color="primary">
+                        Register
+                    </Button>
+                </div>
+            </div>
+
         </form>
     )
 }

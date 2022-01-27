@@ -1,14 +1,14 @@
 import React from 'react'
-import image from '../assets/img/doguito404.svg'
+import image from '../assets/img/logo-1.png'
 import '../assets/css/404.css'
 
-const Pagina404 = () => { 
+const Pagina404 = () => {
   return (
     <main className="container flex flex--center flex--column" >
-      <img className="doguito-image" src={image} alt="ilustração doguito"/>
       <p className="notfound-texto">
-        Ops, Essa página não existe!
+        Ops! Page not found...
       </p>
+      <img className="logo-image" src={image} alt="ilustração logo" />
     </main>
   )
 }

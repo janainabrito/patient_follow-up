@@ -1,16 +1,16 @@
 import React from 'react'
 import '../assets/css/components/card.css'
 
-const Sobre = () => {
+const About = () => {
 
   return (
     <main>
       <div className="container">
-        <h2 className="title-page">Sobre Doguito</h2>
+        <h2 className="title-page">About Patient Follow-Up..</h2>
       </div>
       <section className="container flex flex--center">
         <article className="card">
-          O blog do doguito foi criado para tirar diversas dúvidas sobre o mundo pet!!!
+          Patient Follow-Up Application is in progress :B
         </article>
 
       </section>
@@ -18,4 +18,4 @@ const Sobre = () => {
   )
 }
 
-export default Sobre
+export default About

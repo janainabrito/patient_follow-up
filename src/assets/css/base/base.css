@@ -1,14 +1,23 @@
 @import url(_reset.css);
 @import url(_variable.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Pacifico&display=swap");
 
 body {
-	background-color: var(--color-secondary);
-	color: var(--color-contrast-dark);
-	font-family: var(--font-family-body);
+	background-color: var(--color-secondary) !important;
+	color: var(--color-contrast-dark) !important;
+	font-family: var(--font-family-body) !important;
 }
 
-.container { 
+a {
+	color: var(--color-category-behavior) !important;
+	text-decoration: none !important;
+}
+
+a:hover {
+	color: var(--color-link-hover) !important;
+}
+
+.container {
 	padding-right: 1rem;
 	padding-left: 1rem;
 }
@@ -32,7 +41,7 @@ body {
 	font-family: var(--font-family-title-page);
 	font-size: var(--font-size-title-page);
 	background-color: var(--color-contrast-light);
-    border-radius: 10px;
+	border-radius: 10px;
 	box-shadow: var(--shadow);
 	height: 4.75rem;
 	margin-top: 1.25rem;
@@ -40,16 +49,16 @@ body {
 	padding-left: 2rem;
 }
 
-@media(min-width: 800px) {
-  .container {
+@media (min-width: 800px) {
+	.container {
 		padding-right: 2.5rem;
-		padding-left: 2.5rem;	
+		padding-left: 2.5rem;
 	}
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
 	.container {
-		padding-left: calc((100vw - 900px)/2);
-		padding-right: calc((100vw - 900px)/2);
+		padding-left: calc((100vw - 900px) / 2);
+		padding-right: calc((100vw - 900px) / 2);
 	}
 }

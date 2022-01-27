@@ -4,13 +4,15 @@ import 'fontsource-roboto'
 
 export function UserRegistration() {
     function submit(data: any) {
-        console.log('data+++', data);
+        console.log('data:', data);
     }
 
     return (
         <>
-            <Typography component="h1" variant="h5" align="center">User Registration Form</Typography>
-            <RegistrationForm submit={submit}/>
+            <div className="container">
+                <h2 className="title-page">User Registration</h2>
+            </div>
+            <RegistrationForm submit={submit} />
         </>
     );
 }

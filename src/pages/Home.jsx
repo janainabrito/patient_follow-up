@@ -1,16 +1,12 @@
 import React from 'react'
-import ListaPost from '../components/ListPost'
+import { UserRegistration } from './userRegistration'
 
 const Home = () => {
 
   return (
     <main>
-      <div className="container">
-        <h2 className="title-page">Pet notícias</h2>
-      </div>
-      <ListaPost url={'/posts'} />
+      <UserRegistration />
     </main>
-    
   )
 }
 
